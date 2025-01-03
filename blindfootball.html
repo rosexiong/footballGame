@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盲人足球</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #1a472a;
+            touch-action: none;
+            overflow: hidden;
+        }
+        canvas {
+            background: #2d8044;
+            border: 2px solid white;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+        }
+        #startButton {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1;
+        }
+        button {
+            font-family: Arial, sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            background: #45a049 !important;
+            transform: translateX(-50%) scale(1.05) !important;
+        }
+        
+        button:active {
+            transform: translateX(-50%) scale(0.95) !important;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <button id="startButton">开始游戏</button>
+    
+    <!-- 添加隐藏的图片预加载 -->
+    <img id="footballImage" src="football.png" style="display: none;">
+    
+    <script src="game.js"></script>
+</body>
+</html>
